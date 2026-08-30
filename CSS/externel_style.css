@@ -1,0 +1,36 @@
+/* Tag based selector */
+
+/* h1{
+    background-color: violet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul{
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* id based selector */
+
+/* #first{
+     background-color: tomato;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-size: 20px;
+} */
+
+/* class based selector */
+
+/* .unique{
+    background-color: green;
+} */
+
+/* group based selector */
+
+/* h1 , .angel,#first{
+    background-color: springgreen;
+} */

@@ -1,0 +1,59 @@
+/* h1{
+    background-color: slateblue;
+}
+
+h2{
+    background-color: tan;
+}
+
+p{
+    background-color: cadetblue;
+}
+
+ul{
+    background-color: blueviolet;
+}
+
+ol{
+    background-color: turquoise;
+} */
+
+/* h1
+{
+    font-size: 50px;
+    background-color: aquamarine;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 500;
+    font-style: italic;
+} */
+
+/* px - picture element */
+/* ul{
+    font-size: 20px;
+}
+
+li{
+    font-size: 1em;
+} */
+
+/* html{
+    font-size: 20px;
+}
+
+h2{
+    font-size: 2rem;
+} */
+
+/* h2{
+    font-size: 5vw;
+} */
+
+/* h2{
+    font-size: 5vh;
+} */
+
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}

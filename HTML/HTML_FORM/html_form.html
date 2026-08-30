@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM</title>
+</head>
+
+<body>
+    <form>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="1" required>
+        <br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male" id="male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" value="Female" id="female" required>
+        <label for="female">Female</label>
+
+        <input type="radio" name="gender" value="Other" id="other" required>
+        <label for="other">Other</label>
+
+        <br><br>
+
+        <label for="subject">Subject : </label>
+        <label for="C++">C++</label>
+        <input type="checkbox" name="subject" id="C++" value="C++">
+
+        <label for="Java">Java</label>
+        <input type="checkbox" name="subject" id="Java" value="Java">
+
+        <label for="C">C</label>
+        <input type="checkbox" name="subject" id="C" value="C">
+
+        <label for="Python">Python</label>
+        <input type="checkbox" name="subject" id="Python" value="Python">
+
+        <label for="HTML">HTML</label>
+        <input type="checkbox" name="subject" id="HTML" value="HTML">
+
+        <br><br>
+
+        <label for="course">Course : </label>
+        <select name="course" id="course">
+            <option value="Web Development">Web Development</option>
+            <option value="Python Full Stack">Python Full Stack</option>
+            <option value="Java Full Stack">Java Full Stack</option>
+        </select>
+
+        <br><br>
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+
+</html>
+
+
+http://127.0.0.1:5500/HTML_FORM/html_form.html?name=Vaibhav+Kaushik&age=211&password=121321&gender=Male&subject=C%2B%2B&course=Java+Full+Stack&submit=Submit
+
