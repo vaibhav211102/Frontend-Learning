@@ -1,0 +1,28 @@
+/* span is a inline element */
+/* span{
+    background-color: orange;
+} */
+
+h1{
+    background-color: orangered;
+    padding: 20px;
+    /* display: inline;  it make the block level element act like inline element*/
+}
+
+/* *{
+    margin: 0px;
+    padding: 0px;
+} */
+
+h2{
+    background-color: red;
+}
+
+span{
+    height: 200px;
+    width: 200px;
+    padding: 40px;
+    margin: 30px;
+    /* display: block; it make the inline element act like block element */
+}
+/* The css does not apply horizontally on inline tags. */

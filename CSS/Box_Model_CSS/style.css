@@ -1,0 +1,48 @@
+body{
+    background-color: antiquewhite;
+}
+
+h1{
+    background-color: green;
+    /* height: 50px;
+    width: 200px; */
+    text-align: center;
+
+
+    /* border-width: 15px;
+    border-color: yellowgreen;
+    border-style: solid; */
+
+    border: 5px solid black;
+
+
+    padding: 40px;
+    border-radius: 500px;
+}
+
+h2{
+    background-color: chartreuse;
+    border : 5px solid black;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.first{
+    background-color: turquoise;
+    border: 5px solid olive;
+    padding: 10px;
+}
+
+.second{
+    background-color: violet;
+    border: 5px solid black;
+    padding: 10px;
+}
+
+.third{
+    background-color: coral;
+    padding: 10px 10px;
+    border: 5px solid black;
+    border-radius: 40px;
+}
