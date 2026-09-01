@@ -1,0 +1,33 @@
+/* h1{
+    background-color: blue;
+} */
+
+/* #first{
+    background-color: chocolate;
+} */
+
+/* .H{
+    background-color: green;
+} */
+
+/* The highest priority is given to the id and then class and then tags.
+
+1. important key word used to override other styles means inline CSS
+2 . inline CSS (Highest Priority)
+3. id(Priority)
+4. class
+5. tags
+
+*/
+
+/* h1{
+    background-color: bisque;
+} */
+
+/* For the same tags ordering important last comes ***tags or id or class*** have highest priority. */
+
+h2{
+    background-color: wheat !important;
+}
+
+/* !important key word used to override other styles means inline CSS */
