@@ -1,0 +1,58 @@
+body{
+    background-color:bisque
+}
+
+h1{
+    background-color:lightblue;
+}
+
+h2{
+    background-color:lightgreen;
+}
+
+p{
+    background-color:lightyellow;
+}
+
+        /* ul {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            list-style: none;
+            background: #172554;
+            border-radius: 0.75rem;
+        }
+
+        ul a {
+            display: inline-block;
+            padding: 0.65rem 1rem;
+            color: #ffffff;
+            background: #2563eb;
+            border: 2px solid #93c5fd;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        ul a:hover,
+        ul a:focus-visible {
+            color: #172554;
+            background: #facc15;
+            outline: 3px solid #facc15;
+            outline-offset: 2px;
+            transform: translateY(-2px);
+        } */
+
+/* ul {
+    background-color: darkblue;
+} */
+
+ul a {
+    color: black;
+    /* background-color: blue; */
+}
+
+ul a:hover {
+    background-color: lightblue;
+}

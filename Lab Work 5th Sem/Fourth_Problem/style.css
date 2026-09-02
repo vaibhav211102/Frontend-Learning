@@ -1,0 +1,17 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: burlywood;
+    margin: 20px;
+}
+
+#description{
+    background-color:thistle;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.external-css{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: lightblue;
+    border: 2px solid black;
+}
