@@ -1,0 +1,44 @@
+body{
+    background-color: black;
+}
+
+#container{
+    background-color: yellow;
+    height: 200px;
+    width: 300px;
+    position: relative;
+}
+
+.box{
+    box-sizing: border-box;
+    background-color: slateblue;
+}
+
+.first , .third {
+    background-color: slateblue;
+    height: 80px;
+    width: 110px;
+}
+
+.third{
+    position: absolute;
+    bottom: 0px;
+}
+
+.second , .fourth{
+    background-color: slateblue;
+    height: 80px;
+    width: 145px;
+}
+
+.second{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.fourth{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
