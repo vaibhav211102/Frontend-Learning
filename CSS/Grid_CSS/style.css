@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:black;
+}
+
+.container{
+    display: flex;
+    background-color: antiquewhite;
+    padding: 5px;
+    gap: 5px;
+    /* margin-left: 5px; */
+    /* grid-auto-columns: 10px; */
+}
+
+.box{
+    height: 200px;
+    width: 250px;
+    /* grid-auto-columns: 10px; */
+}
+
+.first{
+    background-color: yellow;
+}
+
+.second{
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px; */
+    gap: 20px;
+    /* grid-auto-columns: 10px; */
+}
+
+.child1{
+    height: 100px;
+    background-color: violet;
+}
+
+.child2{
+    height: 100px;
+    background-color: tomato;
+}
