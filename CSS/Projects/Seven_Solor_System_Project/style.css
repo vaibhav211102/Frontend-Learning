@@ -1,0 +1,452 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at center, #10152e 0%, #03040c 55%, #000 100%);
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(#777 1px, transparent 1px);
+    background-size: 120px 120px, 200px 200px, 80px 80px;
+    background-position: 0 0, 40px 80px, 20px 30px;
+    opacity: 0.5;
+}
+
+.one {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #fff8a0 0%, #ffd21f 35%, #ff8c00 70%, #ff4500 100%);
+    z-index: 10;
+    filter: drop-shadow(0 0 25px #ffcc33) drop-shadow(0 0 60px #ff9900) drop-shadow(0 0 120px rgba(255, 140, 0, 0.7));
+    animation: sunGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes sunGlow {
+    from {
+        transform: scale(1);
+        filter: drop-shadow(0 0 25px #ffcc33) drop-shadow(0 0 60px #ff9900) drop-shadow(0 0 100px rgba(255, 140, 0, 0.5));
+    }
+
+    to {
+        transform: scale(1.06);
+        filter: drop-shadow(0 0 35px #fff000) drop-shadow(0 0 80px #ff9900) drop-shadow(0 0 140px rgba(255, 140, 0, 0.8));
+    }
+}
+
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform-origin: center;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: 5;
+}
+
+.two {
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    background: radial-gradient(circle at 30% 30%, #d6d6d6, #777, #292929);
+    box-shadow: 0 0 8px #aaa;
+    animation-name: mercuryOrbit;
+    animation-duration: 5s;
+}
+
+.three {
+    width: 30px;
+    height: 30px;
+    margin: -15px 0 0 -15px;
+    background: radial-gradient(circle at 30% 30%, #ffe4a3, #d69b45, #80501c);
+    box-shadow: 0 0 10px rgba(255, 190, 80, 0.6);
+    animation-name: venusOrbit;
+    animation-duration: 9s;
+}
+
+.four {
+    width: 34px;
+    height: 34px;
+    margin: -17px 0 0 -17px;
+    background: radial-gradient(circle at 30% 30%, #4de1ff 0%, #1684d8 45%, #073c94 100%);
+    box-shadow: 0 0 10px #1684d8, 0 0 20px rgba(30, 144, 255, 0.4);
+    animation-name: earthOrbit;
+    animation-duration: 13s;
+}
+
+.four::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 8px;
+    top: 7px;
+    left: 8px;
+    background: #45b85b;
+    border-radius: 50%;
+}
+
+.five {
+    width: 27px;
+    height: 27px;
+    margin: -13.5px 0 0 -13.5px;
+    background: radial-gradient(circle at 30% 30%, #ffb07c, #c44b25, #732414);
+    box-shadow: 0 0 8px rgba(255, 80, 30, 0.5);
+    animation-name: marsOrbit;
+    animation-duration: 17s;
+}
+
+.six {
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    background: repeating-linear-gradient(0deg, #d8b08b 0px, #f0d1a7 8px, #b77b52 14px, #e9c39b 21px, #a96843 28px);
+    box-shadow: 0 0 15px rgba(220, 170, 120, 0.4);
+    animation-name: jupiterOrbit;
+    animation-duration: 25s;
+}
+
+.six::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 11px;
+    right: 5px;
+    top: 39px;
+    border-radius: 50%;
+    background: #a94c32;
+}
+
+.seven {
+    width: 60px;
+    height: 60px;
+    margin: -30px 0 0 -30px;
+    background: repeating-linear-gradient(0deg, #e8c88e 0px, #c6a36b 8px, #f2d7a5 16px, #a9824e 23px);
+    box-shadow: 0 0 12px rgba(230, 190, 110, 0.4);
+    animation-name: saturnOrbit;
+    animation-duration: 32s;
+}
+
+.seven::before {
+    content: "";
+    position: absolute;
+    width: 105px;
+    height: 25px;
+    top: 17px;
+    left: -22px;
+    border: 5px solid rgba(220, 190, 140, 0.8);
+    border-top-color: rgba(255, 230, 180, 0.9);
+    border-bottom-color: rgba(150, 120, 80, 0.7);
+    border-radius: 50%;
+    transform: rotate(-20deg);
+    z-index: -1;
+}
+
+.eight {
+    width: 43px;
+    height: 43px;
+    margin: -21.5px 0 0 -21.5px;
+    background: radial-gradient(circle at 30% 30%, #b9ffff, #65d7df, #278d9e);
+    box-shadow: 0 0 12px rgba(80, 220, 240, 0.6);
+    animation-name: uranusOrbit;
+    animation-duration: 40s;
+}
+
+.nine {
+    width: 42px;
+    height: 42px;
+    margin: -21px 0 0 -21px;
+    background: radial-gradient(circle at 30% 30%, #8dbaff, #3269e8, #102c91);
+    box-shadow: 0 0 12px rgba(50, 100, 255, 0.6);
+    animation-name: neptuneOrbit;
+    animation-duration: 48s;
+}
+
+@keyframes mercuryOrbit {
+    from {
+        transform: rotate(0deg) translateX(110px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(110px) rotate(-360deg);
+    }
+}
+
+@keyframes venusOrbit {
+    from {
+        transform: rotate(0deg) translateX(160px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(160px) rotate(-360deg);
+    }
+}
+
+@keyframes earthOrbit {
+    from {
+        transform: rotate(0deg) translateX(215px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(215px) rotate(-360deg);
+    }
+}
+
+@keyframes marsOrbit {
+    from {
+        transform: rotate(0deg) translateX(275px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(275px) rotate(-360deg);
+    }
+}
+
+@keyframes jupiterOrbit {
+    from {
+        transform: rotate(0deg) translateX(350px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(350px) rotate(-360deg);
+    }
+}
+
+@keyframes saturnOrbit {
+    from {
+        transform: rotate(0deg) translateX(440px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(440px) rotate(-360deg);
+    }
+}
+
+@keyframes uranusOrbit {
+    from {
+        transform: rotate(0deg) translateX(530px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(530px) rotate(-360deg);
+    }
+}
+
+@keyframes neptuneOrbit {
+    from {
+        transform: rotate(0deg) translateX(620px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(620px) rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .one {
+        width: 100px;
+        height: 100px;
+    }
+
+    .two {
+        animation-name: mercurySmall;
+    }
+
+    .three {
+        animation-name: venusSmall;
+    }
+
+    .four {
+        animation-name: earthSmall;
+    }
+
+    .five {
+        animation-name: marsSmall;
+    }
+
+    .six {
+        animation-name: jupiterSmall;
+    }
+
+    .seven {
+        animation-name: saturnSmall;
+    }
+
+    .eight {
+        animation-name: uranusSmall;
+    }
+
+    .nine {
+        animation-name: neptuneSmall;
+    }
+}
+
+@keyframes mercurySmall {
+    from {
+        transform: rotate(0deg) translateX(75px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(75px) rotate(-360deg);
+    }
+}
+
+@keyframes venusSmall {
+    from {
+        transform: rotate(0deg) translateX(110px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(110px) rotate(-360deg);
+    }
+}
+
+@keyframes earthSmall {
+    from {
+        transform: rotate(0deg) translateX(150px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(150px) rotate(-360deg);
+    }
+}
+
+@keyframes marsSmall {
+    from {
+        transform: rotate(0deg) translateX(190px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(190px) rotate(-360deg);
+    }
+}
+
+@keyframes jupiterSmall {
+    from {
+        transform: rotate(0deg) translateX(240px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(240px) rotate(-360deg);
+    }
+}
+
+@keyframes saturnSmall {
+    from {
+        transform: rotate(0deg) translateX(300px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(300px) rotate(-360deg);
+    }
+}
+
+@keyframes uranusSmall {
+    from {
+        transform: rotate(0deg) translateX(360px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(360px) rotate(-360deg);
+    }
+}
+
+@keyframes neptuneSmall {
+    from {
+        transform: rotate(0deg) translateX(420px) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translateX(420px) rotate(-360deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        min-height: 450px;
+    }
+
+    .one {
+        width: 70px;
+        height: 70px;
+    }
+
+    .two {
+        width: 12px;
+        height: 12px;
+        margin: -6px 0 0 -6px;
+    }
+
+    .three {
+        width: 18px;
+        height: 18px;
+        margin: -9px 0 0 -9px;
+    }
+
+    .four {
+        width: 20px;
+        height: 20px;
+        margin: -10px 0 0 -10px;
+    }
+
+    .five {
+        width: 17px;
+        height: 17px;
+        margin: -8.5px 0 0 -8.5px;
+    }
+
+    .six {
+        width: 35px;
+        height: 35px;
+        margin: -17.5px 0 0 -17.5px;
+    }
+
+    .seven {
+        width: 32px;
+        height: 32px;
+        margin: -16px 0 0 -16px;
+    }
+
+    .eight {
+        width: 24px;
+        height: 24px;
+        margin: -12px 0 0 -12px;
+    }
+
+    .nine {
+        width: 24px;
+        height: 24px;
+        margin: -12px 0 0 -12px;
+    }
+}
