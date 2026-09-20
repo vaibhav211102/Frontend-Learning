@@ -1,5 +1,7 @@
 
-Style beautified · CSS
+/* ========================================
+    Portfolio theme and global reset
+    ======================================== */
 *{
     padding: 0px;
     margin: 0px;
@@ -7,10 +9,11 @@ Style beautified · CSS
 }
  
 body{
-    background-color: #243447;
+    background: radial-gradient(circle at top left, #314b63 0%, #243447 42%, #172331 100%);
     font-family: sans-serif;
     color: #f8fafc;
     line-height: 1.5;
+    min-height: 100vh;
 }
  
 .main-container{
@@ -18,8 +21,9 @@ body{
     max-width: 1200px;
     grid-template-columns: 350px 1fr;
     gap: 30px;
-    padding: 40px;
+    padding: 32px;
     margin: auto;
+    width: 100%;
 }
  
 .sidebar{
@@ -27,9 +31,13 @@ body{
     background-color: #243447;
     border: 1px solid #d6a85f;
     border-radius: 30px;
+    position: sticky;
+    top: 40px;
     /* added: depth + subtle gradient, no existing rules touched */
     background-image: linear-gradient(160deg, #263a4f 0%, #1c2a3a 100%);
     box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
 }
  
 .profile{
@@ -67,6 +75,7 @@ body{
     border-radius: 10px;
     display: inline-block;
     margin-top: 7px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.18);
 }
  
 .contact{
@@ -109,7 +118,6 @@ body{
     border-top: 2px solid #d6a85f;
     padding: 10px;
     text-align: center;
-    margin-top: 7px;
 }
  
 .social img{
@@ -140,6 +148,11 @@ body{
     background-image: linear-gradient(160deg, #33506b 0%, #263c4f 100%);
     box-shadow: 0 20px 40px rgba(0,0,0,0.35);
     overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.main-content::-webkit-scrollbar{
+    display: none;
 }
  
 #navigation{
@@ -165,11 +178,12 @@ nav a{
     color: #243447;
     border-radius: 10px;
     display: inline-block;
-    padding: 5px 5px;
-    transition: 0.3s ease-out;
-    /* added: extra breathing room + shadow so buttons feel tappable */
     padding: 6px 14px;
+    transition: 0.3s ease-out;
+    /* extra breathing room + shadow so buttons feel tappable */
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    min-height: 36px;
+    text-align: center;
 }
  
 nav a:hover{
@@ -187,6 +201,7 @@ nav a:hover{
     font-weight: 700;
     margin-top: 10px;
     color: #f4c978;
+    letter-spacing: 0.02em;
 }
  
 .line{
@@ -219,12 +234,17 @@ nav a:hover{
  
 .item{
     padding: 10px;
-    margin-left: 10px;
+    margin-left: 0;
     background-color: #243447;
     border: 1px solid #243447;
     border-radius: 6px;
     transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
     margin-top: 3px;
+    min-height: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 0 1px rgba(255,255,255,0.04);
 }
  
 .item h3{
@@ -324,16 +344,23 @@ nav a:hover{
 }
  
 .education{
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 15px;
+    position: relative;
+    overflow: hidden;
+    color: #f8fafc;
+}
+
+.education .heading{
+    color: #f4c978;
+    margin-top: 50px;
 }
  
 .education-item{
-    margin-top: 20px;
-    padding: 15px;
-    margin: 5px;
+    margin: 5px 0;
+    padding: 15px 15px 15px 20px;
+    position: relative;
     /* added: subtle left accent to mark timeline entries */
-    border-left: 2px solid rgba(214,168,95,0.4);
 }
  
 .year{
@@ -361,9 +388,162 @@ nav a:hover{
 }
  
 .goal{
-    height:10px;
-    width: 10px;
+    height:7px;
+    width: 7px;
     border-radius: 50%;
-    /* background-color: #d6a85f; */
-    border: 3px solid d6a85f;
+    border: 5px solid #d6a85f;
+    position: absolute;
+    top: 14%;
+    left: -10px;
+    margin-left: 5px;
+} 
+
+.sideline{
+    height: 81.5%;
+    width: 2px;
+    background-color: #d6a85f;
+    position: absolute;
+    top: 20%;
+    left: -6px;
+    margin-left: 4.5px;
+}
+
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 24px;
+}
+
+.project-container .heading{
+    margin-top: 50px;
+}
+
+.project img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.project{
+    background-color: #243447;
+    border: 1px solid #243447;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover{
+    background-color: transparent;
+    border-color: transparent;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 10px #243447;
+}
+
+/* Give project images a subtle zoom without changing their layout. */
+.project:hover img{
+    transform: scale(1.04);
+}
+
+.cards{
+    padding: 20px;
+}
+
+.cards h3{
+    color: #f4c978;
+    margin-bottom: 6px;
+}
+
+.cards p{
+    color: #f8fafc;
+    line-height: 1.6;
+    text-align: start;
+}
+
+.cards span{
+    display: inline-block;
+    background-color: #d6a85f;
+    border: 1px solid #f4c978;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    margin: 2px 5px 2px 0;
+    padding: 4px 8px;
+}
+
+/* Tablet: reduce fixed dimensions while preserving the two-column layout. */
+@media (max-width: 900px){
+    .main-container{
+        max-width: 100%;
+    }
+
+    .project-container{
+        gap: 16px;
+    }
+}
+
+/* Mobile: stack all content and remove desktop-only sticky behavior. */
+@media (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .main-container{
+        width: 100%;
+        padding: 12px;
+    }
+
+    .sidebar{
+        position: relative;
+        top: auto;
+    }
+
+    .main-content{
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 8px;
+    }
+
+    .project-container{
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin-top: 20px;
+    }
+
+    .project img{
+        height: 180px;
+    }
+
+    .education{
+        padding: 10px;
+    }
+}
+
+/* Very small screens: keep controls and text comfortably tappable. */
+@media (max-width: 400px){
+    nav a{
+        flex: 1 1 80px;
+    }
+
+    .cards{
+        padding: 15px;
+    }
+
+    .cards span{
+        font-size: 0.85rem;
+    }
+}
+
+/* Respect users who prefer reduced motion. */
+@media (prefers-reduced-motion: reduce){
+    *,
+    *::before,
+    *::after{
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
