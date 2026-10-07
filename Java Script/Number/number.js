@@ -58,3 +58,15 @@
 // console.log(a == b);
 // Check the data type of a Number object.
 // console.log(typeof a);
+
+// Boolean() converts a value to a boolean result.
+// These values are considered falsy in JavaScript.
+console.log(Boolean(null)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean(0)); // false
+console.log(Boolean("")); // false
+console.log(Boolean(false)); // false
+
+// These values are considered truthy in JavaScript.
+console.log(Boolean({})); // true
+console.log(Boolean({ name: "Vaibhav" })); // true
